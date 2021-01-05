@@ -21,7 +21,7 @@ export class ProductsController {
 
     @Get('/test')
     getTest() {
-        return 'test';
+        return 'test12334455577777777';
     }
 
 }
