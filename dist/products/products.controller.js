@@ -28,6 +28,9 @@ let ProductsController = class ProductsController {
         return this.productService.createProduct(createProductDto);
         ;
     }
+    getTest() {
+        return 'test';
+    }
 };
 __decorate([
     common_1.Get(),
@@ -43,6 +46,12 @@ __decorate([
     __metadata("design:paramtypes", [create_product_dto_1.CreateProductDto]),
     __metadata("design:returntype", Promise)
 ], ProductsController.prototype, "createProduct", null);
+__decorate([
+    common_1.Get('/test'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], ProductsController.prototype, "getTest", null);
 ProductsController = __decorate([
     common_1.Controller('products'),
     __metadata("design:paramtypes", [products_service_1.ProductsService])

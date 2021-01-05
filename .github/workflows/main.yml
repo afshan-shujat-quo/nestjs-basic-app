@@ -23,6 +23,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Create build
+      run: npm run build --prod  
 
 # Creating my deployment package and compressing it into a zip file   
     - name: Generate deployment package

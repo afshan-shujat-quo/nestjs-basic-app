@@ -19,4 +19,9 @@ export class ProductsController {
         return this.productService.createProduct(createProductDto);;
     }
 
+    @Get('/test')
+    getTest() {
+        return 'test';
+    }
+
 }
