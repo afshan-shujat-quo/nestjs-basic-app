@@ -1,14 +1,14 @@
-// specify the name of your project
-name: React Charts Build
+# specify the name of your project
+name: NodeJS
 
-// Configure what events and branches you want to trigger your pipeline on, in this case I want it to be trgiggered when I push the code in react-profile branch
+# Configure what events and branches you want to trigger your pipeline on, in this case I want it to be trgiggered when I push the code in react-profile branch
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
     
-// Create jobs to create your image which you can deploy on AWS, I am running my Node12 application on ubuntu OS. 
+# Create jobs to create your image which you can deploy on AWS, I am running my Node12 application on ubuntu OS. 
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-// Creating my deployment package and compressing it into a zip file   
+# Creating my deployment package and compressing it into a zip file   
     - name: Generate deployment package
       run: zip -r deploy.zip * -x "**node_modules**"
 
@@ -41,7 +41,7 @@ jobs:
         replace-with: '-'
         flags: 'g'
 
-// Now, its time to deploy our package to Beanstalk that we've configured earlier, to deploy our app we need Secret keys that we can get from the AWS user, every user has separate keys on AWS. 
+# Now, its time to deploy our package to Beanstalk that we've configured earlier, to deploy our app we need Secret keys that we can get from the AWS user, every user has separate keys on AWS. 
 
     - name: Beanstalk Deploy for app
       uses: einaregilsson/beanstalk-deploy@v10
