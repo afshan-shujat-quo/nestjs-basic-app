@@ -6,6 +6,8 @@ import { ProductRepository } from './product.repository';
 
 @Injectable()
 export class ProductsService {
+
+    // Service file
     constructor(
         @InjectRepository(ProductRepository)
         private productRepository: ProductRepository
