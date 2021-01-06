@@ -29,7 +29,7 @@ let ProductsController = class ProductsController {
         ;
     }
     getTest() {
-        return 'test';
+        return 'test123344555';
     }
 };
 __decorate([

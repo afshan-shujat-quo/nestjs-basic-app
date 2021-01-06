@@ -3152,7 +3152,7 @@
         "affectsGlobalScope": false
       },
       "../src/products/products.controller.ts": {
-        "version": "c0adac6e61b65eb6394f919ca50110bb4c178273b8f8c4475ada8cde8604e7a3",
+        "version": "9fcf3dbfd76cc3d2b6276968fd2a2181f64c4aa8fe11342b64161bf7c5ae7c6d",
         "signature": "1e8a25982ee7e67b8e645d43117285b21b97477f80ce9d7d25d4805a80be047b",
         "affectsGlobalScope": false
       },
